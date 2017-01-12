@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
-import TunesSelector from './components/TunesSelector'
-import TunesDetail from './components/TunesDetail'
+import TunesSelector from './../components/TunesSelector'
+import TunesDetail from './../components/TunesDetail'
 
 class TunesContainer extends React.Component {
   
@@ -32,11 +32,11 @@ render () {
         <div>
           <h2>Top Alternative Albums</h2>
           <TunesSelector 
-          albums={this.state.albums}
+          albums={this.albums}
           selectAlbum={this.setFocusAlbum}
           />
           <TunesDetail 
-          album={this.state.focusAlbum}
+          album={this.focusAlbum}
           handleClick={this.handleClick}
           />
         </div>

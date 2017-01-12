@@ -1,12 +1,11 @@
 import React from 'react'
 
-class TunesSelector extends React.Component{
-  getInitialState: function () {
+class TunesSelector extends React.Component {
+  getInitialState () {
     return { selectedIndex: undefined };
-  },
-  render: function () {
-    var options = this.props.albums.map(function (album, index) {
-
+  }
+  render () {
+    const options = this.props.albums.map(function (album, index) {
       return (
         <option 
         value={index} 
@@ -22,13 +21,13 @@ class TunesSelector extends React.Component{
         {options}
       </select>
     );
-  },
-  handleChange: function (event) {
-    var newIndex = parseInt(event.target.value);
+  }
+  handleChange (event) {
+    const newIndex = parseInt(event.target.value);
     this.setState({selectedIndex: newIndex});
-    var album = this.props.albums[newIndex];
+    const album = this.props.albums[newIndex];
     this.props.selectAlbum(album);
   }
-});
+};
 
 module.exports = TunesSelector;

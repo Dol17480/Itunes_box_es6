@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react'
 
-var TunesDetail = function (props) {
+const TunesDetail = (props) => {
   if (!props.album) {
     return <h4>No album selected</h4>
   }
@@ -14,5 +14,5 @@ var TunesDetail = function (props) {
   );
 };
 
-module.exports = TunesDetail;
+export default TunesDetail;
 
